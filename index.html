@@ -1,0 +1,200 @@
+<html>
+	<head>
+			<style>
+			body{
+				background-color:lightgreen;
+			
+			}
+
+			#div1{
+				height:7.5%;
+				background-color:pink;
+				font-size:3em;
+				color:blue;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+			}
+
+			#div2{
+				height:7.5%;
+				background-color:pink;
+				font-size:2.125em;
+				color:blue;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+			}
+
+			#div3{
+				height:70%;
+				background-color:skyblue;
+				text-align:center;
+			}
+
+			#div4{
+				height:7.5%;
+				background-color:pink;
+				font-size:3em;
+				color:blue;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+			}
+
+			#div5{
+				height:7.5%;
+				background-color:pink;
+				font-size:3em;
+				color:blue;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+			}
+
+			#lamp1, #lamp2, #lamp3, #lamp4{
+				height:20%;
+				width:20%;
+				accent-color:red;
+			}
+
+			#btn1{
+				font-size:2.5em;
+				height:15%;
+				width:20%;
+				background-color:yellow;
+				color:red;
+			}
+			
+			#txt1{
+				width:30%;
+				height:20%;
+				background-color:white;
+				color:red;
+				font-size:5em;
+				text-align:center;
+			}
+
+			</style>
+			<script>
+					let step=0;
+					setInterval(timer1,500);
+
+					function timer1() {
+									switch(step){
+									case 100:
+									step=1;
+									break;
+									
+									case 200:
+									break;
+
+									case 300:
+										document.getElementById('lamp1').checked=false;
+										document.getElementById('lamp2').checked=false;
+										document.getElementById('lamp3').checked=false;
+										document.getElementById('lamp4').checked=false;
+									break;
+									
+									case 1:
+										document.getElementById('lamp1').checked=true;
+										document.getElementById('lamp2').checked=false;
+										document.getElementById('lamp3').checked=false;
+										document.getElementById('lamp4').checked=false;
+										step=2;
+									break;
+
+									case 2:
+										document.getElementById('lamp1').checked=true;
+										document.getElementById('lamp2').checked=true;
+										document.getElementById('lamp3').checked=false;
+										document.getElementById('lamp4').checked=false;
+										step=3;
+									break;
+
+									case 3:
+										document.getElementById('lamp1').checked=true;
+										document.getElementById('lamp2').checked=true;
+										document.getElementById('lamp3').checked=true;
+										document.getElementById('lamp4').checked=false;
+										step=4;
+									break;
+
+
+									case 4:
+										document.getElementById('lamp1').checked=true;
+										document.getElementById('lamp2').checked=true;
+										document.getElementById('lamp3').checked=true;
+										document.getElementById('lamp4').checked=true;
+										step=5;
+									break;
+
+									case 5:
+										document.getElementById('lamp1').checked=true;
+										document.getElementById('lamp2').checked=true;
+										document.getElementById('lamp3').checked=true;
+										document.getElementById('lamp4').checked=false;
+										step=6;
+									break;
+
+									case 6:
+										document.getElementById('lamp1').checked=true;
+										document.getElementById('lamp2').checked=true;
+										document.getElementById('lamp3').checked=false;
+										document.getElementById('lamp4').checked=false;
+										step=7;
+									break;
+
+									case 7:
+										document.getElementById('lamp1').checked=true;
+										document.getElementById('lamp2').checked=false;
+										document.getElementById('lamp3').checked=false;
+										document.getElementById('lamp4').checked=false;
+										step=8;
+									break;
+
+									case 8:
+										document.getElementById('lamp1').checked=false;
+										document.getElementById('lamp2').checked=false;
+										document.getElementById('lamp3').checked=false;
+										document.getElementById('lamp4').checked=false;
+										step=1;
+									break;
+					}
+
+}
+					function start() {
+									step=100;
+					}
+
+					function pause() {
+									step=200;
+					}
+
+					function stop() {
+									step=300;
+					}
+			</script>
+	</head>
+	<body>
+			<div id = 'div1'>  - 램프 시퀀스 - </div>
+			<div id = 'div2'> 〔 Lamp Sequence 〕 </div>
+			<div id = 'div3'>
+					<br> <br> <br> <br> <br>
+					<input type='radio' id='lamp1'> 
+					<input type='radio' id='lamp2'>
+					<input type='radio' id='lamp3'>
+					<input type='radio' id='lamp4'>
+					<br> <br> <br> <br> <br>
+			<input type='text' id='txt1'>
+					<br> <br> <br>
+					<button id='btn1' onclick='start();'> START </button>
+					&nbsp&nbsp&nbsp&nbsp
+					<button id='btn1' onclick='pause();'> PAUSE </button>
+					&nbsp&nbsp&nbsp&nbsp
+					<button id='btn1' onclick='stop();'> STOP </button>
+			</div>
+			<div id = 'div4'> 메카트로닉스과 안 동 기 </div>
+			<div id = 'div5'> Mechatronics An-Donggi </div>
+	</body>
+<html>
